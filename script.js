@@ -1,91 +1,49 @@
-//step 1: prompt the user
-prompt("Welcome! This is a password generator. Before continuing further, please set up a password")
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
-//step 2
+//1st step: list the variables needed
 
-  //step a
+  var char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  var num = "1234567890";
+  var sym = "!@#$%^&*()";
 
-  //step b
+//2nd step: list the alerts
+prompt("Welcome! Before continuing further, please create a password that is 8-128 characters long.");
 
-  //step c
+//alert("The password must contain special characters");
 
-//step 3
+//alert("The password must contain numeric characters");
 
-  //step a
+// alert("The password must contain lowercase letters");
 
-  //step b
+// alert("The password must contain uppercase letters");
 
-  //step c
+//3rd step: writing out the functions
 
-//step 4
+function password (1,characters) {
+  var pwd = " ";
 
-  //step a
+}
 
-  //step b
 
-  //step c
 
-//step 5
+// function welcome() {
+//   console.log("Welcome!")
+// }
 
-  //step a
 
-  //step b
 
-  //step c
+//third step: write a for loop so user cancel out
+for(var i = 0; i<l; i++){
+  pwd: +- characters.charAt(Math.floor(Math.random() * characters.length));
+}
 
-//step 6
+return pwd;
 
-  //step a
 
-  //step b
 
-  //step c
 
-//step 7
 
-  //step a
 
-  //step b
 
-  //step c
-
-//step 8
-
-  //step a
-
-  //step b
-
-  //step c
-
-//step 9
-
-  //step a
-
-  //step b
-
-  //step c
-
-//step 10
-
-  //step a
-
-  //step b
-
-  //step c
-
-//step 11
-
-  //step a
-
-  //step b
-
-  //step c
-
-//step 12
-
-  //step a
-
-  //step b
-
-  //step c
 
