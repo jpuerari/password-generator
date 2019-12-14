@@ -18,10 +18,16 @@ alert("Welcome! Please click the generate button below");
 function makeAPassword() {
   var length = prompt("Before continuing further, please choose a length that is 8-128 characters long.");
   console.log(length)
-  if (isNaN(length)) {
-    alert("Please enter an appropriate length");
-    return;
+
+  if(length < 8 || length > 128) {
+    alert("Must be between 8 and 128");
+    return makeAPassword();
   }
+
+  // if (isNaN(length)) {
+  //   alert("Please enter an appropriate length");
+  //   return;
+  // }
 
   var symbolChoice = confirm("Do you want special characters?");
   console.log(symbolChoice)
@@ -76,6 +82,12 @@ button.addEventListener("click", makeAPassword);
 
 //function to copy password to clipboard
 
-  document.getElementById("copyToClipBoard").select();
-  document.execCommand("Copy");
-  alert("Password copied to clipboard!")
+function myFunction() {
+  var copyText = document.getElementById("password");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+};
+
+var copyButton = document.getElementById("copyToClipBoard");
+copyButton.addEventListener("click", myFunction);
