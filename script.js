@@ -79,6 +79,3 @@ button.addEventListener("click", makeAPassword);
   document.getElementById("copyToClipBoard").select();
   document.execCommand("Copy");
   alert("Password copied to clipboard!")
-
-
-//add password to textbox/display area
