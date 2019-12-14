@@ -11,7 +11,7 @@ var finalPassword = "";
 //2nd step: list the alerts
 
 
-alert("welcome, please click the generate button below");
+alert("Welcome! Please click the generate button below");
 
 
 
@@ -79,10 +79,6 @@ button.addEventListener("click", makeAPassword);
   document.getElementById("copyToClipBoard").select();
   document.execCommand("Copy");
   alert("Password copied to clipboard!")
-}
+
 
 //add password to textbox/display area
-
-
-
-
