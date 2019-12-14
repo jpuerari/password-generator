@@ -1,4 +1,5 @@
 // Assignment Code
+
 //1st step: list the variables needed
 var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
@@ -17,7 +18,7 @@ alert("welcome, please click the generate button below");
 function makeAPassword(){
 var length = prompt("Before continuing further, please choose a length that is 8-128 characters long.");
 console.log(length)
-if(length < 8 || length > 128){
+if (isNaN(length)){
   alert("Please enter an appropriate length");
 }
 
@@ -44,12 +45,14 @@ if(numberChoice === true){
 }
 
 console.log(possibleCharacters)
+
+
 //3rd step: writing out the functions
 function password (i,characters) {
   var pwd = " ";
-}
-//4th step
-//5th step: write a for loop so user cancel out
+ }
+
+//4th step: write a for loop so user cancel out
 for(var i = 0; i<length; i++){
   var num = Math.floor(Math.random() * possibleCharacters.length)
   var randomChar = possibleCharacters[num];
@@ -58,13 +61,21 @@ for(var i = 0; i<length; i++){
 }
 
 console.log(finalPassword)
-document.getElementById("password").value = finalPassword
+document.getElementById("password").value = finalPassword;
 }
 
 var button = document.getElementById("generate");
 button.addEventListener("click", makeAPassword);
 
+//function to copy password to clipboard
+function copyPassword(){
+  document.getElementById("copyToClipBoard").select();
+  document.execCommand("Copy");
+  alert("Password copied to clipboard!")
+}
 
+ //add password to textbox/display area
+ document.getElementById("display").value = password;
 
 
 
