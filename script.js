@@ -60,7 +60,7 @@ function makeAPassword() {
     return;
   }
 
-  //4th step: write a for loop so user cancel out
+  //4th step: write a for loop 
   for (var i = 0; i < length; i++) {
     var num = Math.floor(Math.random() * possibleCharacters.length)
     var randomChar = possibleCharacters[num];
