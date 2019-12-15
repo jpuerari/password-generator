@@ -11,42 +11,37 @@ var finalPassword = "";
 //2nd step: list the alerts
 
 
-alert("Welcome! Please click the generate button below");
+alert("Welcome! Please click the generate button below to create a password");
 
 
 
 function makeAPassword() {
-  var length = prompt("Before continuing further, please choose a length that is 8-128 characters long.");
+  var length = prompt("Before continuing further, please create a password that is between 8-128 characters.");
   console.log(length)
 
   if(length < 8 || length > 128) {
-    alert("Must be between 8 and 128");
+    alert("The password MUST be between 8 and 128 characters");
     return makeAPassword();
   }
 
-  // if (isNaN(length)) {
-  //   alert("Please enter an appropriate length");
-  //   return;
-  // }
-
-  var symbolChoice = confirm("Do you want special characters?");
+  var symbolChoice = confirm("Would you like to add special characters to your password?");
   console.log(symbolChoice)
   if (symbolChoice === true) {
     possibleCharacters = possibleCharacters + symbolCharacters;
   }
 
 
-  var upperChoice = confirm("Do you want upper case characters?");
+  var upperChoice = confirm("Would you like to add upper case characters to your password?");
   if (upperChoice === true) {
     possibleCharacters = possibleCharacters + upperCaseCharacters;
   }
 
   // confirm the result in true or false booleans, you can use it right away instead of storing it in a variable that you'll immediately use
-  if (confirm("Do you want lower case characters?") === true) {
+  if (confirm("Would you like to add lower case characters to your password?") === true) {
     possibleCharacters = possibleCharacters + lowerCaseCharacters;
   }
 
-  var numberChoice = confirm("Do you want number characters?");
+  var numberChoice = confirm("Would you like to add number characters to your password?");
   if (numberChoice === true) {
     possibleCharacters = possibleCharacters + numberCharacters;
   }
@@ -61,7 +56,7 @@ function makeAPassword() {
 
   // if there's nothing in possibleCharacters, stop function
   if (!possibleCharacters) {
-    alert("You need to tell us what characters you want!");
+    alert("You need to tell us what characters you would like to add!");
     return;
   }
 
@@ -86,7 +81,7 @@ function myFunction() {
   var copyText = document.getElementById("password");
   copyText.select();
   document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+  alert("Congratulations! your text has just been copied to the clipboard." + copyText.value);
 };
 
 var copyButton = document.getElementById("copyToClipBoard");
