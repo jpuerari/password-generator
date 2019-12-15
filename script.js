@@ -16,7 +16,7 @@ alert("Welcome! Please click the generate button below to create a password");
 
 
 function makeAPassword() {
-  var length = prompt("Before continuing further, please create a password that is between 8-128 characters.");
+  var length = prompt("Before continuing further, please type in a numerical value (i.e. 12) that is between 8-128 characters to determine the length of your password.");
   console.log(length)
 
   if(length < 8 || length > 128) {
@@ -81,7 +81,7 @@ function myFunction() {
   var copyText = document.getElementById("password");
   copyText.select();
   document.execCommand("copy");
-  alert("Congratulations! your text has just been copied to the clipboard." + copyText.value);
+  alert("Congratulations! your password has just been copied to the clipboard. Your password is: " + copyText.value);
 };
 
 var copyButton = document.getElementById("copyToClipBoard");
